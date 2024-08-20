@@ -10,16 +10,24 @@
       <div class="col-6">
         <form>
           <div class="form-group">
-            <label>Name</label>
+            <label>Category Name</label>
             <input type="text" class="form-control" v-model="name" />
           </div>
           <div class="form-group">
-            <label>Description</label>
+            <label>Category Description</label>
             <textarea type="text" class="form-control" v-model="description" />
           </div>
           <div class="form-group">
-            <label>Image</label>
-            <input type="text" class="form-control" v-model="imageUrl" />
+            <label>Category Image</label>
+            <input type="url" class="form-control" v-model="imageURL" />
+          </div>
+          <div class="form-group text-center">
+            <img
+              :src="imageURL"
+              alt="Category Image"
+              v-if="imageURL"
+              class="img-fluid mt-3"
+            />
           </div>
           <button type="button" class="btn btn-primary" @click="addCategory">
             Submit
@@ -38,16 +46,15 @@ export default {
     return {
       name: "",
       description: "",
-      imageUrl: "",
+      imageURL: "",
     };
   },
   methods: {
     addCategory() {
-      console.log(this.name, this.description);
       const newCategory = {
         name: this.name,
         description: this.description,
-        imageUrl: this.imageUrl,
+        imageUrl: this.imageURL,
       };
 
       const baseURL = "http://localhost:8080";

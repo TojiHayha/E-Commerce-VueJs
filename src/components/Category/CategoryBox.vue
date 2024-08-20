@@ -1,8 +1,6 @@
 <template>
-  <div class="card w-100 h-100" style="margin-top: 10px">
-    <div class="embed-responsive embed-responsive-16by9">
-      <img src="category.imageUrl" class="card-img-top" alt="Card image cap" />
-    </div>
+  <div class="card h-100 w-100">
+      <img :src="category.imageUrl" class="card-img-top" alt="Category image" />
     <div class="card-body">
       <h5 class="card-title">{{ category.name }}</h5>
       <p class="card-text">
@@ -21,7 +19,7 @@ export default {
 </script>
 
 <style scoped>
-.card-img-top{
-    object-fit: cover;
+.card-img-top {
+  object-fit: cover;
 }
 </style>
