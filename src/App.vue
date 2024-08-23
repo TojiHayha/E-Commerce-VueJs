@@ -7,6 +7,7 @@
   <router-view 
   :baseURL="baseURL"
   :categories="categories"
+  :products="products"
   >
   </router-view>
 </template>
