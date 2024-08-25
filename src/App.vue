@@ -1,13 +1,10 @@
 <template>
-  <div id="nav">
     <Navbar></Navbar>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view 
+  <router-view v-if="categories && products"
   :baseURL="baseURL"
   :categories="categories"
   :products="products"
+  @fetchData="fetchData"
   >
   </router-view>
 </template>
@@ -23,8 +20,8 @@ export default {
   data(){
     return{
       baseURL : "http://localhost:8080",
-      products: [],
-      categories: [], 
+      products: null,
+      categories: null, 
     }
   },
   methods: {

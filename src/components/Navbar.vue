@@ -1,7 +1,6 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top w-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-        <div class="container-fluid">
         <router-link class="navbar-brand" :to="{ name: 'Home' }">
             <img id="logo" src="../assets/logo.png" />
         </router-link>
@@ -29,7 +28,7 @@
             </form>
             <router-link class="nav-link" :to="{name: 'Admin'}"> Admin </router-link>
         </div>
-        </div>
+        
     </nav>
 
 </template>
@@ -40,17 +39,17 @@ export default {
 };
 </script>
 
-<style>
-body {
-    padding-top: 100px; 
-}
+<style scoped>
 #logo{
     width: 65px;
     margin-left: 20px;
     margin-right: 20px;
 }
-.nav-link {
-  color: rgba(255, 255, 255) !important;
+a{
+    color: white;
+}
+.navbar{
+    margin-bottom: 15px;
 }
 
 </style>

@@ -3,7 +3,7 @@
         <button class="btn btn-primary btn-lg">Admin Category</button>
     </RouterLink>
     <br>
-    <RouterLink :to="{name: 'AdminProduct'}">
+    <RouterLink :to="{name: 'Product'}">
         <button class="btn btn-primary btn-lg">Admin Products</button>
     </RouterLink>
 </template>
