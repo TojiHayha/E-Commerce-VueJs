@@ -48,8 +48,6 @@ export default {
 a{
     color: white;
 }
-.navbar{
-    margin-bottom: 15px;
-}
+
 
 </style>
