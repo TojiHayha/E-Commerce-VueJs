@@ -7,15 +7,19 @@
   @fetchData="fetchData"
   >
   </router-view>
+  <!--footer-->
+  <Footer/>
 </template>
 
 <script>
 import axios from "axios";
 import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   components: {
     Navbar,
+    Footer
   },
   data(){
     return{

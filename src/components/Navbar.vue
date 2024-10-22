@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
         <router-link class="navbar-brand" :to="{ name: 'Home' }">
-            <img id="logo" src="../assets/logo.png" />
+            <img id="logo" src="../assets/Logo.png" />
         </router-link>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -41,13 +41,15 @@ export default {
 
 <style scoped>
 #logo{
-    width: 65px;
+    width: 150px;
     margin-left: 20px;
     margin-right: 20px;
 }
 a{
     color: white;
 }
-
+.navbar{
+    max-height: 100px;
+}
 
 </style>
