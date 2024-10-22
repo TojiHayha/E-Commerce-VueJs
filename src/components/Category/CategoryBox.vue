@@ -1,12 +1,15 @@
 <template>
   <div class="card h-100 w-100">
-      <img :src="category.imageUrl" class="card-img-top" alt="Category image" />
+    <img :src="category.imageUrl" class="card-img-top" alt="Category image" />
     <div class="card-body">
       <h5 class="card-title">{{ category.name }}</h5>
       <p class="card-text">
         {{ category.description }}
       </p>
-      <router-link :to="{name: 'EditCategory', params: {id: category.id}}" v-show="$route.name == 'Category'">
+      <router-link
+        :to="{ name: 'EditCategory', params: { id: category.id } }"
+        v-show="$route.name == 'Category'"
+      >
         <button class="btn btn-primary">Edit</button>
       </router-link>
     </div>
@@ -21,7 +24,19 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  width: 18rem;
+  height: 100%;
+}
+
 .card-img-top {
+  height: 200px;
   object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 </style>

@@ -4,7 +4,8 @@
     <div class="card-body">
       <h5 class="card-title">{{ product.name }}</h5>
       <p class="card-text">{{ product.description.substring(0, 65) }}...</p>
-      <router-link :to="{ name: 'EditProduct', params: { id: product.id } }">
+      <router-link :to="{ name: 'EditProduct', params: { id: product.id } }"
+      v-show="$route.name == 'Product'">
         <button class="btn btn-primary">Edit</button>
       </router-link>
     </div>
@@ -17,7 +18,19 @@ export default {
 };
 </script>
 <style scoped>
+.card {
+  width: 18rem; 
+  height: 100%; 
+}
+
 .card-img-top {
-  object-fit: cover;
+  height: 200px; 
+  object-fit: contain; 
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 </style>
