@@ -9,17 +9,13 @@ import AddProduct from '../views/Product/AddProduct.vue'
 import EditCategory from '../views/Category/EditCategory.vue'
 import EditProduct from '../views/Product/EditProduct.vue'
 import ShowDetails from '../views/Product/ShowDetails.vue'
+import ShowProducts from '../views/Category/ShowProducts.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
   },
   {
     path: '/admin',
@@ -61,6 +57,11 @@ const routes = [
     path: '/product/show/:id',
     name: 'ShowDetails',
     component: ShowDetails
+  },
+  {
+    path: '/category/show/:id',
+    name: 'ShowProducts',
+    component: ShowProducts
   }
 
 ]

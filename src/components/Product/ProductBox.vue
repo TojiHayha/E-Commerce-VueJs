@@ -30,9 +30,15 @@ export default {
   object-fit: contain; 
 }
 
+a{
+    text-decoration: none;
+}
 .card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.card-title{
+  color: #484848;
 }
 </style>
